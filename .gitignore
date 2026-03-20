@@ -1,0 +1,4 @@
+.next
+node_modules
+pages/docs/_handlers/example.tsx
+pages/docs/_handlers/example-two.tsx

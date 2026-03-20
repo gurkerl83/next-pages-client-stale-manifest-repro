@@ -1,0 +1,22 @@
+{
+  "name": "next-pages-client-stale-manifest-repro",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.30.2",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.2.1-canary.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.1",
+    "@types/react": "^19.2.2",
+    "typescript": "^5.9.3"
+  }
+}
