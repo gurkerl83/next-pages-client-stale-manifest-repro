@@ -64,6 +64,13 @@ This repro is aimed at the case where those client-side assumptions lag behind
 the server: the server can already serve `/docs/_handlers/example`, but the
 client still behaves as if only `/docs/[...slug]` is available.
 
+This repro also sets `skipProxyUrlNormalize: true` in `next.config.ts`.
+That is not the suspected bug. It is only used so `proxy.ts` can still see the
+raw client-side `/_next/data/...` request shape before Next normalizes it.
+The bug this repo is targeting is later than that: the client can still keep
+the catch-all page component even after the rewritten handler route is already
+servable.
+
 In pseudocode, the suspect client behavior looks roughly like this:
 
 ```ts
